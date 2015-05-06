@@ -16,8 +16,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSInteger input = 11;
+    
+    NSLog(@"The sum of the multiples of 3 and 5 up to %ld is %ld", input, [self sumFinder:input]);
+    
+    
     return YES;
+}
+
+-(NSInteger)sumFinder:(NSInteger)val{
+    NSInteger sum = 0;
+    for (int i = 0; i<val; i++) {
+        if (i % 3 == 0) {
+            sum += i;
+        }
+        else if (i % 5 == 0){
+            sum += i;
+        }
+    }
+    return sum;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
